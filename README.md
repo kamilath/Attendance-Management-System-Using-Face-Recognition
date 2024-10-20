@@ -13,17 +13,20 @@ This project implements a web-based attendance management system that utilizes f
 - pip (Python package installer)
 ## Run the application:
 1.python app.py
+
 2.Access the application: Open your web browser and go to http://127.0.0.1:5000/.
 ## Usage
 **1.Login**:
 - Login as 'admin' or 'staff' using the credentials:
 - Admin credentials: username: admin, password: admin_pass
 - Staff credentials: username: staff, password: staff_pass
+  
 **2.Upload Classroom Image**:
 - Navigate to the upload page after logging in as staff.
 - Upload the classroom image containing students' faces.
-- View Attendance:
-**3.Admin can view attendance records from the attendance page**.
+  
+**3.View Attendance**:
+- Admin can view attendance records from the attendance page.
 **4WhatsApp Notification**:After processing the image, an attendance summary will be sent to the specified WhatsApp number.
 ##Functionality
 **1.Face Detection and Recognition**: The system uses OpenCV to detect and align faces in the uploaded classroom image. It utilizes the DeepFace library to verify detected faces against the registered student images.
