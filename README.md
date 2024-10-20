@@ -17,7 +17,6 @@ This project implements a web-based attendance management system that utilizes f
 2.Access the application: Open your web browser and go to http://127.0.0.1:5000/.
 ## Usage
 **1.Login**:
-- Login as 'admin' or 'staff' using the credentials:
 - Admin credentials: username: admin, password: admin_pass
 - Staff credentials: username: staff, password: staff_pass
   
