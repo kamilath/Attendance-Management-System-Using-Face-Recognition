@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance System</title>
+</head>
+<body>
+    <style>
+        /* General page styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+    background-image: url('sistbg.jpg'); /* Add your background image */
+    background-size: cover; /* Ensure background covers the whole page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
 
+/* Container for the whole content (logo, heading, and login link) */
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* White box with light transparency */
+    padding: 30px; /* Add padding inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add slight shadow for depth */
+    text-align: center; /* Center align the content */
+    width: 300px; /* Set the width of the box */
+}
+
+/* Logo styling */
+.logo {
+    width: 250px; /* Set width of the logo */
+    height: auto; /* Keep aspect ratio */
+    margin-bottom: 20px; /* Space between logo and the heading */
+}
+
+/* Center and style the heading */
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Login link styled as a button */
+a {
+    display: inline-block;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Add padding for better click area */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+a:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+    </style>
+    <div class="container">
+        <img src="sist.jpeg" alt="Attendance Logo" class="logo"> <!-- Logo added here -->
+        <h1>Welcome to the Attendance System</h1>
+        <a href="{{ url_for('login') }}">Login</a>
+    </div>
+</body>
+</html>

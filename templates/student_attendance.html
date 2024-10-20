@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Attendance</title>
+    <link rel="stylesheet" href="student_attendance.css">
+</head>
+<body>
+    <style>
+        /* General page styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+    background-image: url('sistbg.jpg'); /* Add your background image */
+    background-size: cover; /* Ensure background covers the whole page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+/* Container for the whole content (heading, table, and logout link) */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* White box with light transparency */
+    padding: 30px; /* Add padding inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add slight shadow for depth */
+    text-align: center; /* Center align the content */
+    max-width: 600px; /* Set a max width for the container */
+    width: 100%; /* Allow responsiveness */
+}
+
+/* Center and style the heading */
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+.logo {
+    width: 300px; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between the logo and the heading */
+}
+
+/* Table styling */
+table {
+    width: 100%; /* Make the table take the full width of the container */
+    border-collapse: collapse; /* Remove gaps between table cells */
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ccc; /* Add border for table cells */
+}
+
+th {
+    background-color: #4CAF50; /* Green header background */
+    color: white; /* White text for headers */
+}
+
+td {
+    background-color: #f9f9f9; /* Light background for rows */
+}
+
+tr:nth-child(even) td {
+    background-color: #f1f1f1; /* Slightly different background for even rows */
+}
+
+/* Hover effect for table rows */
+tr:hover td {
+    background-color: #e0e0e0; /* Slightly darken on hover */
+}
+
+/* Logout button styling */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+a:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+    </style>
+    <div class="container">
+        <img src="sist.jpeg" alt="Attendance Logo" class="logo">
+        <h1>Your Attendance Records</h1>
+        <table border="1">
+            <tr>
+                <th>Reg No</th>
+                <th>Name</th>
+            </tr>
+            {% for record in attendance_data.iterrows() %}
+            <tr>
+                <td>{{ record[1]['regno'] }}</td>
+                <td>{{ record[1]['name'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</body>
+</html>

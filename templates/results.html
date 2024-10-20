@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+    <style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/static/sistbg.jpg'); /* Add your background image */
+    background-size: cover; /* Ensure background covers the whole page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+/* Container for the whole results display with transparency */
+.container {
+    background-color: rgba(255, 255, 255, 0.703); /* Light transparency */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Fixed width for better control */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Center and style the heading */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px; /* Adjusted font size for the title */
+    color: #333; /* Set a color for the heading */
+}
+
+/* Paragraph styling for "Present Students:" */
+p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px; /* Font size for the paragraph */
+}
+
+/* List styling for present students */
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 10px 0; /* Margin for spacing */
+    width: 100%; /* Full width */
+    text-align: center; /* Center text */
+}
+
+li {
+    margin: 5px 0; /* Margin between list items */
+    font-size: 14px; /* Font size for list items */
+}
+
+/* Link styling */
+a {
+    background-color: #4CAF50; /* Background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    width: 50%; /* Width of the button */
+    display: inline-block; /* Makes the anchor tag behave like a block element */
+    margin: 10px 0; /* Add vertical space between buttons */
+    text-align: center; /* Center the text inside */
+    text-decoration: none; /* Remove underline from the text */
+}
+
+/* Change background and text color on hover */
+a:hover {
+    background-color: #4CAF50; /* Background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+
+/* Error message styling (if needed) */
+.error {
+    margin-top: 10px;
+    text-align: center;
+    color: #4CAF50;
+}
+
+/* Optional: Adjust form label styling if any labels are added */
+label {
+    align-self: flex-start;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #4CAF50;
+}
+
+    </style>
+    <div class="container">
+        <h1>Attendance Results</h1>
+        <p>Present Students:</p>
+        <ul>
+            <li>{{ present_students['name'] }} ({{ present_students['regno'] }})</li>
+        </ul>
+        <a href="{{ url_for('upload_file') }}">Upload Another Image</a>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</body>
+</html>
