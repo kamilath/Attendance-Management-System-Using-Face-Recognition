@@ -40,4 +40,5 @@ Upon successful processing, the application displays:
 - List of present students
 - List of absent students
 - Count of unknown faces detected
+  
 An attendance summary is also sent to the configured WhatsApp number.
