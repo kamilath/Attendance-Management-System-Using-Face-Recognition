@@ -25,9 +25,9 @@ This project implements a web-based attendance management system that utilizes f
 - Navigate to the upload page after logging in as staff.
 - Upload the classroom image containing students' faces.
   
-**3.View Attendance**:Admin can view attendance records from the attendance page.
+**3.View Attendance**: Admin can view attendance records from the attendance page.
 
-**4WhatsApp Notification**:After processing the image, an attendance summary will be sent to the specified WhatsApp number.
+**4WhatsApp Notification**: After processing the image, an attendance summary will be sent to the specified WhatsApp number.
 ## Functionality
 **1.Face Detection and Recognition**: The system uses OpenCV to detect and align faces in the uploaded classroom image. It utilizes the DeepFace library to verify detected faces against the registered student images.
   
